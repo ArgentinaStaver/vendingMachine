@@ -4,11 +4,11 @@ import Keypad from '../components/Keypad/Keypad';
 
 
 const mapStateToProps = state => ({
-    code: state.code,
+    code: state.userActions.code,
 })
 
 const mapDispatchToProps = dispatch => ({
-    fetchKeypadCode: code => dispatch(productCodeToBuy(code)),
+    setKeypadCode: code => dispatch(productCodeToBuy(code)),
 })
 
 const FetchKeypadCode = connect(mapStateToProps, mapDispatchToProps)(Keypad);

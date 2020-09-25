@@ -1,24 +1,21 @@
-import React, { useState } from 'react';
-import { Grid } from '@material-ui/core';
+import React from 'react';
+import { Grid, Typography } from '@material-ui/core';
 import useStyles from './Keypad.style';
 
 
 const Keypad = ((props) => {
     const classes = useStyles();
-    console.log(props);
-    const [code, setCode] = useState('');
-
-
 
     const handleClick = (digit) => {
-        const newCode = code + digit;
-        props.fetchKeypadCode(newCode);
-        //setCode(newCode);
+        const newCode = props.code + digit;
+        props.setKeypadCode(newCode);
     }
 
-    console.log(props);
     return (
         <Grid item className={classes.keypadWrapper}>
+            <Grid item className={classes.title}>
+                <Typography component="h3">Select product code</Typography>
+            </Grid>
             <Grid item className={classes.rowKeypad}>
                 <div className={classes.key} onClick={() => handleClick(7)}>
                     <kbd>7</kbd>

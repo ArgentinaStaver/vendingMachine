@@ -2,19 +2,23 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => createStyles({
     display: {
-        // display: 'flex',
+        display: 'flex',
+        width: '188px',
+        height: '150px',
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        border: '3px solid #1A1A1A',
+        padding: theme.spacing(2),
+        marginBottom: theme.spacing(3),
+
     },
-    // key: {
-    //     border: '4px solid #1A1A1A',
-    //     borderRadius: '8px',
-    //     margin: '8px',
-    //     fontSize: '16px',
-    //     lineHeight: '16px',
-    //     padding: '15px',
-    //     textAlign: 'center',
-    //     color: 'white',
-    //     background: 'rgba(0,0,0,0.4)',
-    // },
+    displayRow: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        borderBottom: `1px solid #E5E5E5`,
+        fontSize: '18px',
+        color: "#4C4C4C",
+    },
 }));
 
 export default useStyles;

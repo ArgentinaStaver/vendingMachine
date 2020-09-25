@@ -13,7 +13,14 @@ const useStyles = makeStyles((theme) => createStyles({
         padding: '15px',
         textAlign: 'center',
         color: 'white',
-        background: 'rgba(0,0,0,0.4)',
+        background: '#4C4C4C',
+    },
+    title: {
+        textAlign: 'center',
+        '& h3': {
+           fontSize: '20px',
+        },
+        color: '#4C4C4C',
     },
 }));
 

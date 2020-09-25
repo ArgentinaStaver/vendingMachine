@@ -1,25 +1,28 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import './App.style.js';
 import ProductsList from './containers/FetchAllProducts';
 import FetchKeypadCode from './containers/FetchKeypadCode';
-import ReceiveCash from './components/Money/ReceiveCash';
-import Display from './components/Display/Display';
+import CashContainer from './containers/ReceiveCash';
+import DisplayContainer from './containers/Display';
 import useStyles from './App.style';
 
 
-function App() {
+const App = () => {
   const classes = useStyles();
 
   return (
     <Grid container className={classes.mainContent}>
+      <Grid item className={classes.title}>
+        <Typography component="h1">Tonomat 24/24</Typography>
+      </Grid>
       <Grid item className={classes.productsWrapper}>
         <ProductsList />
       </Grid>
       <Grid item className={classes.keypadWrapper}>
-        <Display />
+        <DisplayContainer />
         <FetchKeypadCode />
-        <ReceiveCash />
+        <CashContainer />
       </Grid>
     </Grid>
   );
